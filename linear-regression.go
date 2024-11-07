@@ -141,7 +141,7 @@ func Accuracy(yTrue, yPred *mat.VecDense) float64 {
 }
 
 func main() {
-	data, target, err := LoadCSV("/Users/rashminagpal/Desktop/gopherconAU-demo/housing.csv")
+	data, target, err := LoadCSV("/workspaces/gopherConAU/housing.csv")
 	if err != nil {
 		log.Fatal(err)
 	}
