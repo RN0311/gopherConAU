@@ -43,7 +43,7 @@ func loadCSV(filename string) ([][]float64, error) {
 }
 
 func main() {
-	filename := "/Users/rashminagpal/Desktop/gopherconAU-demo/iris.csv"
+	filename := "/workspaces/gopherConAU/iris.csv"
 
 	data, err := loadCSV(filename)
 	if err != nil {
