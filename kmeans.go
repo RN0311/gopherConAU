@@ -6,8 +6,7 @@ import (
 	"log"
 	"os"
 	"strconv"
-    "time"
-
+	"time"
 	"github.com/mpraski/clusters"
 )
 
@@ -26,11 +25,11 @@ func loadCSV(filename string) ([][]float64, error) {
 
 	var data [][]float64
 	for i, line := range rawData {
-		if i == 0 { 
+		if i == 0 {
 			continue
 		}
 		var row []float64
-		for _, value := range line[:4] { 
+		for _, value := range line[:4] {
 			floatValue, err := strconv.ParseFloat(value, 64)
 			if err != nil {
 				return nil, fmt.Errorf("unable to parse value %q as float: %v", value, err)
@@ -64,6 +63,6 @@ func main() {
 	fmt.Printf("Clustered data set into %d clusters\n", c.Sizes())
 	for i, guess := range c.Guesses() {
 		fmt.Printf("Data Point %d: Cluster %d\n", i+1, guess)
-        time.Sleep(100 * time.Millisecond)
+		time.Sleep(100 * time.Millisecond)
 	}
 }
